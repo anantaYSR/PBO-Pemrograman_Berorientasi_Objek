@@ -3,6 +3,7 @@ package POSTTEST.posttest1;
 // import/memanggil data pada file folder lain, hal ini dapat di lakukan karena merupakan public class
 import POSTTEST.posttest1.objek.Barang;
 
+// import semua utilitas java menggunakan *
 import java.util.*;
 import java.io.*;
 
