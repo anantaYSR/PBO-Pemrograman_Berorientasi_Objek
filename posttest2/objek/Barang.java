@@ -10,7 +10,7 @@ public class Barang {
     private String satuan_barang;
     
 
-
+    // pembuatan encapsulation (getter and stter)
     public String getKargo_pengirim() {
         return kargo_pengirim;
     }
