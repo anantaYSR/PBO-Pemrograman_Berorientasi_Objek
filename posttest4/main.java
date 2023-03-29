@@ -322,6 +322,8 @@ public class main{
         String addjenis_cairan;
         String addjenis_barangpdt;
 
+        int myNum = tampilkandata(bendacair.size(), bendapadat.size());
+        System.out.println("TOTAL DATA : " + myNum);
         System.out.println("Ubah Data Barang");
         System.out.println("1. Benda Cair");
         System.out.println("2. Benda Padat");
@@ -509,6 +511,8 @@ public class main{
 
     // fungsi menghapus data 
     public static void deletedata() throws IOException{  
+        int myNum = tampilkandata(bendacair.size(), bendapadat.size());
+        System.out.println("TOTAL DATA : " + myNum);
         System.out.println("Hapus Data Barang");
         System.out.println("1. Benda Cair");
         System.out.println("2. Benda Padat");
@@ -573,10 +577,3 @@ public class main{
         }        
     }
 }
-
-
-
-
-
-
-
