@@ -1,4 +1,4 @@
-package POSTTEST.posttest6.ClassInterface;
+package POSTTEST.posttest6.Inter_face;
 
 import java.io.IOException;
 

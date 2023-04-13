@@ -1,12 +1,12 @@
 package POSTTEST.posttest6.objek;
 
 import java.io.IOException;
-
-import POSTTEST.posttest6.ClassInterface.interface2;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.Scanner;
+
+import POSTTEST.posttest6.Inter_face.interface2;
 
 public class Bendapadat extends Barang implements interface2 {
 
@@ -62,15 +62,13 @@ public class Bendapadat extends Barang implements interface2 {
 
     @Override
     public void tambahkandata() throws IOException{
-        
+        clearscreen();
         int nilai;
         String addkargo_pengirim;
         String addsatuan_barang;
         String addJenis_barangpdt;
-
-        System.out.println("Nambah data");
-        System.out.println("Benda Padat\n\n");
-        System.out.println("===== Benda Padat =====");
+        System.out.println("=====|| Nambah data ||=====");
+        System.out.println("=====   Benda Padat   =====");
         System.out.print("Nama Kargo Pengirim  \n\t 1.JNE \n\t 2.JNT \n\t 3.SiCepat \n");
         System.out.print("Masukan Nama Kargo Pengirim:");
         Scanner input1 = new Scanner(System.in);
@@ -134,9 +132,9 @@ public class Bendapadat extends Barang implements interface2 {
     /// size == ukuran / panjang array list.
     @Override
     public void tampilkandata() throws IOException{
-    System.out.println("\nLihat data");
-    System.out.println("Barang Padat");
-    System.out.println("===== Benda Padat =====");
+    clearscreen();
+    System.out.println("=====|| Lihat Data ||=====");
+    System.out.println("=====   Benda Padat  =====");
     for (int index1 = 0; index1 < bendapadat.size(); index1++) {
         System.out.println("ID = " + (index1+1));
         //karena index itu 0 maka ditambah 1
@@ -156,14 +154,14 @@ public class Bendapadat extends Barang implements interface2 {
 
     @Override
     public void updatedata() throws IOException{
+        clearscreen();
         int nilai;
         String addkargo_pengirim;
         String addsatuan_barang;
         String addjenis_barangpdt;
         
-        System.out.println("Ubah Data Barang");
-        System.out.println("Benda Padat \n\n");
-        System.out.println("===== Benda Padat =====");
+        System.out.println("=====|| Ubah Data ||=====");
+        System.out.println("=====  Benda Padat  =====");
         for (int index1 = 0; index1 < bendapadat.size(); index1++) {
             System.out.println("ID = " + (index1+1));
             bendapadat.get(index1).display();
@@ -243,9 +241,9 @@ public class Bendapadat extends Barang implements interface2 {
 
     @Override
     public void deletedata() throws IOException{  
-        System.out.println("Hapus Data Barang");
-        System.out.println("Benda Padat \n\n");
-        System.out.println("===== Benda Padat =====");
+        clearscreen();
+        System.out.println("=====|| Hapus Data ||=====");
+        System.out.println("=====   Benda Padat  =====");
         for (int index1 = 0; index1 < bendapadat.size(); index1++) {
             System.out.println("ID = " + (index1+1));
             bendapadat.get(index1).display();
@@ -267,14 +265,15 @@ public class Bendapadat extends Barang implements interface2 {
     public void menubendapdt() throws IOException {
         boolean stop = false;
         while (stop == false){
-            System.out.println("------------------------------------------");
-            System.out.println(">>>>>>>>>>>>> DATA INFORMASI <<<<<<<<<<<<<");
-            System.out.println(">>>>>>>>>>>>>  Barang Padat  <<<<<<<<<<<<<");
-            System.out.println("------------------------------------------");
-            System.out.println("1. Tambah Data Barang Padat");
-            System.out.println("2. Lihat Data Barang Padat");
-            System.out.println("3. Perbarui Data Barang Padat");
-            System.out.println("4. Hapus Data Barang Padat");
+            clearscreen();
+            System.out.print("==============================================\n");
+            System.out.print("+++ SISTEM PENDATAAN INVENTORI PERGUDANGAN +++\n");
+            System.out.print(">>>>>>>>>>>>>>>>  Barang Padat  <<<<<<<<<<<<<<\n");
+            System.out.print("==============================================\n");
+            System.out.println("1. Tambah Data");
+            System.out.println("2. Lihat Data");
+            System.out.println("3. Ubah Data");
+            System.out.println("4. Hapus Data");
             System.out.println("5. Kembali");
             System.out.print("Masukkan Pilihan : ");
             int pilihan = Integer.parseInt(br.readLine());

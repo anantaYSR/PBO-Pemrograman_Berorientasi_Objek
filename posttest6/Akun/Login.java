@@ -1,4 +1,4 @@
-package POSTTEST.posttest6.ClassAkun;
+package POSTTEST.posttest6.Akun;
 
 public class Login {
     // Property

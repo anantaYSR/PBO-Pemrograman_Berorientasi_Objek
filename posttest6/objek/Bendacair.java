@@ -1,12 +1,12 @@
 package POSTTEST.posttest6.objek;
 
 import java.io.IOException;
-
-import POSTTEST.posttest6.ClassInterface.interface1;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.Scanner;
+
+import POSTTEST.posttest6.Inter_face.interface1;
 
 
 
@@ -69,64 +69,63 @@ public class Bendacair extends Barang implements interface1{
         String addkargo_pengirim;
         String addsatuan_barang;
         String addJenis_cairan;
-        
-        System.out.println("Nambah data");
-        System.out.println("Benda Cair \n\n");
-                System.out.println("===== Benda Cair =====");
-                System.out.print("Nama Kargo Pengirim  \n\t 1.JNE \n\t 2.JNT \n\t 3.SiCepat \n");
-                System.out.print("Masukan Nama Kargo Pengirim:");
-                Scanner input = new Scanner(System.in);
-                nilai  = input.nextInt();
-                    if (nilai == 1)
-                    {
-                        addkargo_pengirim = "JNE";
-                    }
-                    else if (nilai == 2)
-                    {
-                        addkargo_pengirim = "JNT"; 
-                    }
-                    else {
-                        addkargo_pengirim = "SiCepat"; 
-                    };
-                    
-                System.out.print("Masukan Nama Barang       : ");
-                String addnama_barang = br.readLine();
-                System.out.print("Masukan Jumlah Barang     : ");
-                int addjumlah_barang = Integer.parseInt(br.readLine());
-                System.out.print("Masukan Merk Barang       : ");
-                String addkategori = br.readLine();
-                System.out.print("Nama Satuan Barang         \n\t 1.Kilo \n\t 2.Pack \n\t 3.Dus \n");
-                System.out.print("Masukan Satuan Barang     : ");
-                nilai  = input.nextInt();
-                    if (nilai == 1)
-                    {
-                        addsatuan_barang = "Kilo";
-                    }
-                    else if (nilai == 2)
-                    {
-                        addsatuan_barang = "Pack"; 
-                    }
-                    else {
-                        addsatuan_barang = "Dus"; 
-                    };
-                System.out.print("Jenis cairan      \n\t 1.Kimia \n\t 2.minuman \n\t 3.lainnya \n");
-                System.out.print("Masukan Jenis Cairan     : ");
-                nilai  = input.nextInt();
-                    if (nilai == 1)
-                    {
-                        addJenis_cairan = "Kimia";
-                    }
-                    else if (nilai == 2)
-                    {
-                        addJenis_cairan = "Minuman"; 
-                    }
-                    else {
-                        addJenis_cairan = "Lainnya"; 
-                    };
-                Bendacair bndcair = new Bendacair(addkargo_pengirim, addnama_barang, addjumlah_barang, addkategori, addsatuan_barang, addJenis_cairan, addnama_barang); 
-                // add == menambahkan data ke array list
-                bendacair.add(bndcair);
-                bndcair.isAdded();
+        clearscreen();
+        System.out.println("=====|| Nambah data ||=====");
+        System.out.println("=====    Benda Cair   =====");
+        System.out.print("Nama Kargo Pengirim  \n\t 1.JNE \n\t 2.JNT \n\t 3.SiCepat \n");
+        System.out.print("Masukan Nama Kargo Pengirim:");
+        Scanner input = new Scanner(System.in);
+        nilai  = input.nextInt();
+            if (nilai == 1)
+            {
+                addkargo_pengirim = "JNE";
+            }
+            else if (nilai == 2)
+            {
+                addkargo_pengirim = "JNT"; 
+            }
+            else {
+                addkargo_pengirim = "SiCepat"; 
+            };
+            
+        System.out.print("Masukan Nama Barang       : ");
+        String addnama_barang = br.readLine();
+        System.out.print("Masukan Jumlah Barang     : ");
+        int addjumlah_barang = Integer.parseInt(br.readLine());
+        System.out.print("Masukan Merk Barang       : ");
+        String addkategori = br.readLine();
+        System.out.print("Nama Satuan Barang         \n\t 1.Kilo \n\t 2.Pack \n\t 3.Dus \n");
+        System.out.print("Masukan Satuan Barang     : ");
+        nilai  = input.nextInt();
+            if (nilai == 1)
+            {
+                addsatuan_barang = "Kilo";
+            }
+            else if (nilai == 2)
+            {
+                addsatuan_barang = "Pack"; 
+            }
+            else {
+                addsatuan_barang = "Dus"; 
+            };
+        System.out.print("Jenis cairan      \n\t 1.Kimia \n\t 2.minuman \n\t 3.lainnya \n");
+        System.out.print("Masukan Jenis Cairan     : ");
+        nilai  = input.nextInt();
+            if (nilai == 1)
+            {
+                addJenis_cairan = "Kimia";
+            }
+            else if (nilai == 2)
+            {
+                addJenis_cairan = "Minuman"; 
+            }
+            else {
+                addJenis_cairan = "Lainnya"; 
+            };
+        Bendacair bndcair = new Bendacair(addkargo_pengirim, addnama_barang, addjumlah_barang, addkategori, addsatuan_barang, addJenis_cairan, addnama_barang); 
+        // add == menambahkan data ke array list
+        bendacair.add(bndcair);
+        bndcair.isAdded();
     }
 
     // fungsi global untuk menampilkan data yang di simpan di array list
@@ -134,9 +133,9 @@ public class Bendacair extends Barang implements interface1{
     /// size == ukuran / panjang array list.
     @Override
     public void tampilkandata1() throws IOException{
-    System.out.println("\nLihat data");
-    System.out.println("Barang Cair");
-    System.out.println("===== Benda Cair =====");
+    clearscreen();
+    System.out.println("=====|| Lihat Data ||=====");
+    System.out.println("=====    Benda Cair  =====");
     for (int index = 0; index < bendacair.size(); index++) {
         System.out.println("ID = " + (index+1));
         //karena index itu 0 maka ditambah 1
@@ -156,14 +155,14 @@ public class Bendacair extends Barang implements interface1{
 
     @Override
     public void updatedata1() throws IOException{
+        clearscreen();
         int nilai;
         String addkargo_pengirim;
         String addsatuan_barang;
         String addjenis_cairan;
 
-        System.out.println("Ubah Data Barang");
-        System.out.println("Benda Cair");
-        System.out.println("===== Benda Cair =====");
+        System.out.println("=====|| Ubah Data ||=====");
+        System.out.println("=====    Benda Cair  =====");
         for (int index = 0; index < bendacair.size(); index++) {
             System.out.println("ID = " + (index+1));
             bendacair.get(index).display();
@@ -244,9 +243,9 @@ public class Bendacair extends Barang implements interface1{
 
     @Override
     public void deletedata1() throws IOException{  
-        System.out.println("Hapus Data Barang");
-        System.out.println("Benda Cair");
-        System.out.println("===== Benda Cair =====");
+        clearscreen();
+        System.out.println("=====|| Hapus Data ||=====");
+        System.out.println("=====    Benda Cair  =====");
         for (int index = 0; index < bendacair.size(); index++) {
             bendacair.get(index).display();
         }
@@ -270,14 +269,15 @@ public class Bendacair extends Barang implements interface1{
     public void menubendacair1() throws IOException {
         boolean stop = false;
         while (stop == false){
-            System.out.println("------------------------------------------");
-            System.out.println(">>>>>>>>>>>>> DATA INFORMASI <<<<<<<<<<<<<");
-            System.out.println(">>>>>>>>>>>>> SERVICE LAPTOP <<<<<<<<<<<<<");
-            System.out.println("------------------------------------------");
-            System.out.println("1. Tambah Data Service");
-            System.out.println("2. Lihat Data Service");
-            System.out.println("3. Perbarui Data Service");
-            System.out.println("4. Hapus Data Service");
+            clearscreen();
+            System.out.print("==============================================\n");
+            System.out.print("+++ SISTEM PENDATAAN INVENTORI PERGUDANGAN +++\n");
+            System.out.print(">>>>>>>>>>>>>>>>  Barang Cair  <<<<<<<<<<<<<<<\n");
+            System.out.print("==============================================\n");
+            System.out.println("1. Tambah Data");
+            System.out.println("2. Lihat Data");
+            System.out.println("3. Ubah Data");
+            System.out.println("4. Hapus Data");
             System.out.println("5. Kembali");
             System.out.print("Masukkan Pilihan : ");
             int pilihan = Integer.parseInt(br.readLine());

@@ -4,14 +4,18 @@ package POSTTEST.posttest6;
 import java.util.*;
 import java.io.*;
 
+import POSTTEST.posttest6.Akun.Login;
 import POSTTEST.posttest6.objek.*;
-import POSTTEST.posttest6.ClassAkun.Login;
 
 public final class main {
 
     static final BufferedReader input = new BufferedReader(new InputStreamReader(System.in));
     static ArrayList<Login> login = new ArrayList<Login>();
-    
+
+    public final static void clearscreen() {
+        System.out.print("\033[H\033[2J");
+        System.out.flush();
+    }
     // Fungsi Main
     public static void main(String[] args) throws Exception {
 
@@ -22,22 +26,25 @@ public final class main {
 
             Boolean stop = false;
             Login admin = new Login("ananta","123");
-            System.out.println("|                Login Akun              |");
-            System.out.println("------------------------------------------");
-            System.out.print("- Username     : ");
+            System.out.println("====================================");
+            System.out.println("               Login Akun           ");
+            System.out.println("====================================");
+            System.out.print("Username     : ");
             String username = input.readLine();
-            System.out.print("- Password     : ");
+            System.out.print("Password     : ");
             String password = input.readLine();
+            System.out.println("====================================");
+            clearscreen();
             
             while (stop == false){
     
                 if (username.equals(admin.getUsername()) && password.equals(admin.getPassword())) {
+                    
     
-                    System.out.println("------------------------------------------");
-                    System.out.println(">>>>>>>>>>> PENDATAAN INFORMASI <<<<<<<<<<");
-                    System.out.println(">>>>>>>>>>>>>> SERVICE LAPTOP <<<<<<<<<<<<");
-                    System.out.println("------------------------------------------");
-                    System.out.println("Admin : " + admin.getUsername());
+                    System.out.print("==============================================\n");
+                    System.out.print("+++ SISTEM PENDATAAN INVENTORI PERGUDANGAN +++\n");
+                    System.out.print("==============================================\n");
+                    System.out.println("Admin : " + admin.getUsername() );
                     System.out.println("\n1. Kelola Data Barang Cair");
                     System.out.println("2. Kelola Data Barang Padat");
                     System.out.println("3. Logout");
@@ -59,7 +66,7 @@ public final class main {
                             break;
                     }
                 }else{
-                    System.out.println(">>>> WARNING: USERNAME/PASSWORD SALAH <<<<");
+                    System.out.println(" WARNING: USERNAME/PASSWORD SALAH ");
                     stop = true;
                 }
             }
