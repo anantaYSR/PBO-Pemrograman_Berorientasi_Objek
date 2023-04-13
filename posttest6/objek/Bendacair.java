@@ -269,7 +269,7 @@ public class Bendacair extends Barang implements interface1{
     public void menubendacair1() throws IOException {
         boolean stop = false;
         while (stop == false){
-            clearscreen();
+            
             System.out.print("==============================================\n");
             System.out.print("+++ SISTEM PENDATAAN INVENTORI PERGUDANGAN +++\n");
             System.out.print(">>>>>>>>>>>>>>>>  Barang Cair  <<<<<<<<<<<<<<<\n");

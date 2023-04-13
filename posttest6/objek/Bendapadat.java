@@ -62,69 +62,69 @@ public class Bendapadat extends Barang implements interface2 {
 
     @Override
     public void tambahkandata() throws IOException{
-        clearscreen();
-        int nilai;
-        String addkargo_pengirim;
-        String addsatuan_barang;
-        String addJenis_barangpdt;
-        System.out.println("=====|| Nambah data ||=====");
-        System.out.println("=====   Benda Padat   =====");
-        System.out.print("Nama Kargo Pengirim  \n\t 1.JNE \n\t 2.JNT \n\t 3.SiCepat \n");
-        System.out.print("Masukan Nama Kargo Pengirim:");
-        Scanner input1 = new Scanner(System.in);
-        nilai  = input1.nextInt();
-            if (nilai == 1)
-            {
-                addkargo_pengirim = "JNE";
-            }
-            else if (nilai == 2)
-            {
-                addkargo_pengirim = "JNT"; 
-            }
-            else {
-                addkargo_pengirim = "SiCepat"; 
-            };
-            
-        System.out.print("Masukan Nama Barang       : ");
-        String addnama_barang1 = br.readLine();
-        System.out.print("Masukan Jumlah Barang     : ");
-        int addjumlah_barang1 = Integer.parseInt(br.readLine());
-        System.out.print("Masukan Merk Barang       : ");
-        String addkategori1 = br.readLine();
+    clearscreen();
+    int nilai;
+    String addkargo_pengirim;
+    String addsatuan_barang;
+    String addJenis_barangpdt;
+    System.out.println("=====|| Nambah data ||=====");
+    System.out.println("=====   Benda Padat   =====");
+    System.out.print("Nama Kargo Pengirim  \n\t 1.JNE \n\t 2.JNT \n\t 3.SiCepat \n");
+    System.out.print("Masukan Nama Kargo Pengirim:");
+    Scanner input1 = new Scanner(System.in);
+    nilai  = input1.nextInt();
+        if (nilai == 1)
+        {
+            addkargo_pengirim = "JNE";
+        }
+        else if (nilai == 2)
+        {
+            addkargo_pengirim = "JNT"; 
+        }
+        else {
+            addkargo_pengirim = "SiCepat"; 
+        };
+        
+    System.out.print("Masukan Nama Barang       : ");
+    String addnama_barang1 = br.readLine();
+    System.out.print("Masukan Jumlah Barang     : ");
+    int addjumlah_barang1 = Integer.parseInt(br.readLine());
+    System.out.print("Masukan Merk Barang       : ");
+    String addkategori1 = br.readLine();
 
-        System.out.print("Nama Satuan Barang         \n\t 1.Kilo \n\t 2.Pack \n\t 3.Dus \n");
-        System.out.print("Masukan Satuan Barang     : ");
-        nilai  = input1.nextInt();
-            if (nilai == 1)
-            {
-                addsatuan_barang = "Kilo";
-            }
-            else if (nilai == 2)
-            {
-                addsatuan_barang = "Pack"; 
-            }
-            else {
-                addsatuan_barang = "Dus"; 
-            };
-        System.out.print("Jenis Benda Padat   \n\t 1.Kimia \n\t 2.Makanan \n\t 3.lainnya \n");
-        System.out.print("Masukan Jenis Benda Padat     : ");
-        nilai  = input1.nextInt();
-            if (nilai == 1)
-            {
-                addJenis_barangpdt = "Kimia";
-            }
-            else if (nilai == 2)
-            {
-                addJenis_barangpdt = "Makanan"; 
-            }
-            else {
-                addJenis_barangpdt = "Lainnya"; 
-            };
+    System.out.print("Nama Satuan Barang         \n\t 1.Kilo \n\t 2.Pack \n\t 3.Dus \n");
+    System.out.print("Masukan Satuan Barang     : ");
+    nilai  = input1.nextInt();
+        if (nilai == 1)
+        {
+            addsatuan_barang = "Kilo";
+        }
+        else if (nilai == 2)
+        {
+            addsatuan_barang = "Pack"; 
+        }
+        else {
+            addsatuan_barang = "Dus"; 
+        };
+    System.out.print("Jenis Benda Padat   \n\t 1.Kimia \n\t 2.Makanan \n\t 3.lainnya \n");
+    System.out.print("Masukan Jenis Benda Padat     : ");
+    nilai  = input1.nextInt();
+        if (nilai == 1)
+        {
+            addJenis_barangpdt = "Kimia";
+        }
+        else if (nilai == 2)
+        {
+            addJenis_barangpdt = "Makanan"; 
+        }
+        else {
+            addJenis_barangpdt = "Lainnya"; 
+        };
 
-        Bendapadat bndpdt = new Bendapadat(addkargo_pengirim, addnama_barang1, addjumlah_barang1, addkategori1, addsatuan_barang, addJenis_barangpdt); 
-        // add == menambahkan data ke array list
-        bendapadat.add(bndpdt);
-        bndpdt.isAdded();
+    Bendapadat bndpdt = new Bendapadat(addkargo_pengirim, addnama_barang1, addjumlah_barang1, addkategori1, addsatuan_barang, addJenis_barangpdt); 
+    // add == menambahkan data ke array list
+    bendapadat.add(bndpdt);
+    bndpdt.isAdded();
     }
 
     // fungsi global untuk menampilkan data yang di simpan di array list
@@ -265,7 +265,7 @@ public class Bendapadat extends Barang implements interface2 {
     public void menubendapdt() throws IOException {
         boolean stop = false;
         while (stop == false){
-            clearscreen();
+            
             System.out.print("==============================================\n");
             System.out.print("+++ SISTEM PENDATAAN INVENTORI PERGUDANGAN +++\n");
             System.out.print(">>>>>>>>>>>>>>>>  Barang Padat  <<<<<<<<<<<<<<\n");
